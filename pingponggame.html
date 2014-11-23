@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>PingPong</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(.) styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+	<style>
+		#game {
+			margin-left:18%;
+			margin-bottom: 50px;
+		}
+		#playground{
+			background: #e0ffe0;
+			width: 400px;
+			height: 200px;
+			position: relative;
+			overflow: hidden;
+		}
+		#ball {
+			background: #fbb;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 150px;
+			top: 100px;
+			border-radius: 10px;
+		}
+		.paddle {
+			background: #bbf;
+			left: 50px;
+			top: 70px;
+			position: absolute;
+			width: 30px;
+			height: 70px;
+		}
+		#paddleB {
+			left: 320px;
+		}	
+	</style>	
+</head>
+
+<body onload="init();">
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Claws</a></li>
+				<li><a href="battleshipgame.html">Battleship</a></li>
+				<li class="active"><a href="pingponggame.html">Pingpong</a></li>
+			</ul>
+			<h3 class="text-muted">Games</h3>
+		</div>
+
+		<div id="game">
+			<div id="scoreboard">
+				<div class="score">You: <span id="scoreB">0</span></div>
+				<div class="score">Guest: <span id="scoreA">0</span></div>
+			</div>
+			<div id="playground">
+				<div id="paddleA" class="paddle"></div>
+				<div id="paddleB" class="paddle"></div>
+				<div id="ball"></div>
+			</div>
+			<div id="spectators"></div>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="pingponggame.js"></script>
+	</body>
+	<div class="footer">
+		<p><span class="glyphicon glyphicon-heart"></span> from Superheroes team, code on Github <a href="">here</a></p>
+	</div>
+</div>
+
+</html>
